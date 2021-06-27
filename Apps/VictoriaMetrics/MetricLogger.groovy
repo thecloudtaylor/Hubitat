@@ -351,6 +351,7 @@ def handleEvent(evt) {
       data += " value=${value}"
     } else if ('thermostatOperatingState' == evt.name) { // thermostatOperatingState: heating = 1, <any other value> = 0
       value = ('heating' == evt.value) ? '1' : '0'
+      value = ('cooling' == evt.value) ? '2' : value
       data += " value=${value}"
     } else if ('thermostatSetpointMode' == evt.name) { // thermostatSetpointMode: followSchedule = 0, <any other value> = 1
       value = ('followSchedule' == evt.value) ? '0' : '1'
